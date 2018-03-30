@@ -1,7 +1,7 @@
 import concurrent.futures
 from bs4 import BeautifulSoup
 
-import utils
+from . import utils
 
 BASE = 'https://{}.ogame.gameforge.com'
 
@@ -23,6 +23,7 @@ def servers(community):
     servers = [int(tag.get('value').split('.')[0][1:-3]) for tag in tags]
 
     return servers
+
 
 def all():
     """Scraps servers for all communities at once in parallel"""

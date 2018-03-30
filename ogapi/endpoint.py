@@ -25,9 +25,6 @@ class Endpoint:
         query = '?' + urllib.parse.urlencode(self.data) if self.data else ''
         return self.path + query
 
-    def __str__(self):
-        return self.path
-
 
 def playerdata(ids):
     """
@@ -51,3 +48,4 @@ highscores = [
 
 if __name__ == "__main__":
     pass
+

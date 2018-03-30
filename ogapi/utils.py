@@ -44,7 +44,7 @@ def parallel(iterable, action, *, executor=None, workers=20):
         for future in concurrent.futures.as_completed(futures):
             yield future.result()
 
+
 if __name__ == "__main__":
-    response = get('https://s159-pl.ogame.gameforge.com/api/players.xml')
-    print(response.text)
+    pass
 
