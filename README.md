@@ -11,9 +11,16 @@ Usage
 ```python
 import ogapi
 
-endpoints = [ogapi.players, ogapi.alliances] + ogapi.highscores
-server = ogapi.Server('pl', 151)
+endpoints = [ogapi.players, ogapi.alliances]
 
-for resource in gather(server, endpoints):
-	print(resource.url)
+for server in ogapi.Community('pl'):
+	for resource in server.resources(endpoints):
+		print(resource.url)
+
+>>> 'https://s151-pl.ogame.gameforge.com/api/players.xml'
+>>> 'https://s151-pl.ogame.gameforge.com/api/alliances.xml'
+>>> 'https://s152-pl.ogame.gameforge.com/api/alliances.xml'
+.
+.
+.
 ```
